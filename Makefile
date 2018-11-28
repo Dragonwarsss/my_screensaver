@@ -11,6 +11,7 @@ NAME	=	pixel
 
 SRCS	=	src/main.c		\
 		src/init.c		\
+		src/fill_struct_1.c	\
 		src/screen_1.c		\
 		src/screen_2.c		\
 		src/screen_3.c		\

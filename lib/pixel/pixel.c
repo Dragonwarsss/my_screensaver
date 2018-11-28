@@ -40,7 +40,8 @@ framebuffer_t *create_buffer(int height, int width)
     return (buffer);
 }
 
-framebuffer_t *set_pixel(framebuffer_t *buffer, int x, int y, sfColor const color)
+framebuffer_t *set_pixel(framebuffer_t *buffer,
+                         int x, int y, sfColor const color)
 {
     int pos_pixel = (y * buffer->width + x) * 4;
 
@@ -68,7 +69,9 @@ framebuffer_t *fill_buffer(framebuffer_t *buffer, sfColor const color)
     return (buffer);
 }
 
-framebuffer_t *draw_square_buffer(framebuffer_t *buffer, int const size, sfVector2f const pos, sfColor const color)
+framebuffer_t *draw_square_buffer(framebuffer_t *buffer,
+                                  int const size,
+                                  sfVector2f const pos, sfColor const color)
 {
     int i = pos.y;
     int j = pos.x;
@@ -107,7 +110,9 @@ framebuffer_t *draw_circle_buffer(framebuffer_t *buffer, int const size,
     return (buffer);
 }
 
-framebuffer_t *draw_arc_buffer(framebuffer_t *buffer, int size, int lenght, sfVector2f const pos, sfColor const color)
+framebuffer_t *draw_arc_buffer(framebuffer_t *buffer, int size,
+                               int lenght, sfVector2f const pos,
+                               sfColor const color)
 {
     int i = pos.y - size;
     int j = pos.x - size;

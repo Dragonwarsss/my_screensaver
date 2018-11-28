@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2018
-** 
+** my_screensaver
 ** File description:
-** 
+** main.c
 */
 
 #include "pixel.h"

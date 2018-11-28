@@ -55,9 +55,12 @@ sc2_t *init_screen2(void)
         win->c_sprite[i] = sfSprite_create();
         win->c_texture[i] = sfTexture_create(500, 500);
         win->c_color[i] = rand_color();
-        win->circle[i] = draw_arc_buffer(win->circle[i], 200, 40, (sfVector2f) {250, 250}, win->c_color[i]);
+        win->circle[i] = draw_arc_buffer(win->circle[i],
+                                         200, 40, (sfVector2f)
+                                         {250, 250}, win->c_color[i]);
         sfSprite_setTexture(win->c_sprite[i], win->c_texture[i], sfTrue);
-        sfTexture_updateFromPixels(win->c_texture[i], win->circle[i]->pixel, 500, 500, 0, 0);
+        sfTexture_updateFromPixels(win->c_texture[i],
+                                   win->circle[i]->pixel, 500, 500, 0, 0);
         win->state[i] = init_state();
     }
     return (win);
@@ -66,24 +69,9 @@ sc2_t *init_screen2(void)
 sc1_t *init_screen1(void)
 {
     sc1_t *win = malloc(sizeof(sc1_t));
-    int size = 0;
-    int i = 0;
 
     srand(time(NULL));
-    for (; i != 1000; i += 1) {
-        size = rand() % 20 + 10;
-        win->circle[i] = create_buffer(60, 60);
-        win->c_sprite[i] = sfSprite_create();
-        win->c_texture[i] = sfTexture_create(60, 60);
-        win->speed[i] = (sfVector2f) {rand() % 6 - 3, rand() % 6 - 6};
-        win->side[i] = rand() % 20 + 10;
-        win->c_color[i] = rand_color();
-        win->circle[i] = draw_circle_buffer(win->circle[i], size, (sfVector2f) {30, 30}, win->c_color[i]);
-        sfSprite_setTexture(win->c_sprite[i], win->c_texture[i], sfTrue);
-        sfTexture_updateFromPixels(win->c_texture[i], win->circle[i]->pixel, 60, 60, 0, 0);
-        win->state[i] = init_state();
-        win->state[i].transform.matrix[5] += 1080;
-    }
+    fill_struct_1(win);
     return (win);
 }
 

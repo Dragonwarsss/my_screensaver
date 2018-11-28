@@ -44,6 +44,7 @@ sc1_t *saved(void);
 sfRenderStates init_state(void);
 sfColor rand_color_fire(void);
 screen_t *init(void);
+void fill_struct_1(sc1_t *win);
 sc1_t *init_screen1(void);
 sc2_t *init_screen2(void);
 sc1_t *init_screen4(void);

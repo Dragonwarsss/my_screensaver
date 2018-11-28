@@ -6,6 +6,7 @@
 */
 
 #include <SFML/Graphics.h>
+#include <time.h>
 #include <stdlib.h>
 #include "pixel.h"
 #include "window.h"
@@ -69,9 +70,12 @@ sc1_t *init_screen4(void)
         win->speed[i] = (sfVector2f) {rand() % 6 - 3, rand() % 18 - 18};
         win->side[i] = rand() % 5 + 10;
         win->c_color[i] = rand_color_fire();
-        win->circle[i] = draw_circle_buffer(win->circle[i], size, (sfVector2f) {30, 30}, win->c_color[i]);
+        win->circle[i] = draw_circle_buffer(win->circle[i],
+                                            size, (sfVector2f)
+                                            {30, 30}, win->c_color[i]);
         sfSprite_setTexture(win->c_sprite[i], win->c_texture[i], sfTrue);
-        sfTexture_updateFromPixels(win->c_texture[i], win->circle[i]->pixel, 60, 60, 0, 0);
+        sfTexture_updateFromPixels(win->c_texture[i],
+                                   win->circle[i]->pixel, 60, 60, 0, 0);
         win->state[i] = init_state();
         win->state[i].transform.matrix[2] = rand() % 600 + 600;
         win->state[i].transform.matrix[5] = rand() % 1080;

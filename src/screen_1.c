@@ -40,6 +40,6 @@ void screen_1(sfRenderWindow *window, sc1_t *win)
         if (win->state[j].transform.matrix[5] < -50) {
         win->pos[j].y = rand() % 1080 + 1080;
             win->state[j].transform.matrix[5] = rand() % 1080 + 1080;
-}
+        }
     }
 }
