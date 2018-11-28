@@ -11,6 +11,20 @@
 #include <SFML/Graphics.h>
 #include <SFML/Window.h>
 
+framebuffer_t *set_clean_buffer(framebuffer_t *buffer)
+{
+    int i = 0;
+
+    while (i != buffer->width * buffer->height * 4) {
+        buffer->pixel[i ] = 0;
+        buffer->pixel[i + 1] = 0;
+        buffer->pixel[i + 2] = 0;
+        buffer->pixel[i + 3] = 0;
+        i += 4;
+    }
+    return (buffer);
+}
+
 framebuffer_t *create_buffer(int height, int width)
 {
     framebuffer_t *buffer = malloc(sizeof(framebuffer_t));

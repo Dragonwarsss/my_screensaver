@@ -13,6 +13,8 @@ SRCS	=	src/main.c		\
 		src/init.c		\
 		src/screen_1.c		\
 		src/screen_2.c		\
+		src/screen_3.c		\
+		src/screen_4.c		\
 		src/print_usage.c	\
 
 OBJS	=	$(SRCS:.c=.o)

@@ -17,6 +17,7 @@ typedef struct s_framebuffer {
 } framebuffer_t;
 
 framebuffer_t *create_buffer(int, int);
+framebuffer_t *set_clean_buffer(framebuffer_t *buffer);
 framebuffer_t *set_pixel(framebuffer_t *buffer, int, int, sfColor const color);
 framebuffer_t *fill_buffer(framebuffer_t *buffer, sfColor const color);
 

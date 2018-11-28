@@ -30,7 +30,6 @@ $(NAME):	$(OBJS)
 	ar rc $(NAME) $(OBJS)
 	mkdir -p ../../include/
 	cp my.h ../../include/
-	cp libmy.a ../
 
 clean:
 	$(RM) $(OBJS)
