@@ -6,6 +6,7 @@
 ##
 
 SRCFILES  = 	pixel.c		\
+		draw.c		\
 		my.c		\
 
 SRCDIR   := .

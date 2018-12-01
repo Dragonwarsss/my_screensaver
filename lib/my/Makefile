@@ -18,9 +18,9 @@ SRCS	=	src/printf.c			\
 		src/nbr/my_put_nbr_octal.c	\
 		src/nbr/my_put_nbr_unsigned.c	\
 		src/nbr/my_put_ptr.c		\
-		src/my_getnbr.c			\
 		src/tools/my_strlen.c		\
 		src/tools/my_strcomp.c		\
+		src/tools/strtol.c		\
 
 OBJS	=	$(SRCS:.c=.o)
 
@@ -30,6 +30,7 @@ $(NAME):	$(OBJS)
 	ar rc $(NAME) $(OBJS)
 	mkdir -p ../../include/
 	cp my.h ../../include/
+	cp is.h ../../include/
 
 clean:
 	$(RM) $(OBJS)

@@ -21,10 +21,11 @@ void free_screen1(sc1_t *win)
     free(win);
 }
 
-void screen_1(sfRenderWindow *window, sc1_t *win)
+void screen_1(sfRenderWindow *window, screen_t *sc)
 {
     static int i = 0;
     int j;
+    sc1_t *win = sc->sc1;
 
     for (j = 0; j != 1000; j += 1) {
         sfRenderWindow_drawSprite(window, win->c_sprite[j], &win->state[j]);

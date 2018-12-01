@@ -83,6 +83,7 @@ screen_t *init(void)
     sc->sc2 = init_screen2();
     sc->sc3 = init_screen1();
     sc->sc4 = init_screen4();
+    sc->sc5 = init_screen5();
     if (!sc || !sc->sc1 || !sc->sc2 || !sc->sc3)
         return (NULL);
     return (sc);

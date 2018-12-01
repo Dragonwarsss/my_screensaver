@@ -27,7 +27,7 @@ void my_put_nbr_unsigned(int nb);
 void my_putstr(char *str);
 void my_putchar(int nb);
 
-int my_getnbr(char *str);
+int my_atoi(char *s);
 
 void free_ll(function_t *fnc);
 function_t *push_ll(function_t *fnc, char c);

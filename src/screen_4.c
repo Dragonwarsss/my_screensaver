@@ -20,10 +20,11 @@ void fade_color(sc1_t *win)
     }
 }
 
-void screen_4(sfRenderWindow *window, sc1_t *win)
+void screen_4(sfRenderWindow *window, screen_t *sc)
 {
     static int i = 0;
     int j;
+    sc1_t *win = sc->sc4;
 
     sfRenderWindow_clear(window, sfBlack);
     for (j = 0; j != 1000; j += 1) {

@@ -10,10 +10,11 @@
 #include "pixel.h"
 #include "window.h"
 
-void screen_3(sfRenderWindow *window, sc1_t *win)
+void screen_3(sfRenderWindow *window, screen_t *sc)
 {
     static int i = 0;
     int j;
+    sc1_t *win = sc->sc3;
 
     sfRenderWindow_clear(window, sfBlack);
     for (j = 0; j != 1000; j += 1) {
@@ -30,6 +31,6 @@ void screen_3(sfRenderWindow *window, sc1_t *win)
         if (win->state[j].transform.matrix[5] < -50) {
         win->pos[j].y = rand() % 1080 + 1080;
             win->state[j].transform.matrix[5] = rand() % 1080 + 1080;
-}
+        }
     }
 }

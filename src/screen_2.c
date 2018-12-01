@@ -22,10 +22,11 @@ void free_screen2(sc2_t *win)
     free(win);
 }
 
-void screen_2(sfRenderWindow *window, sc2_t *win)
+void screen_2(sfRenderWindow *window, screen_t *sc)
 {
     int j;
     static double degrees = 0;
+    sc2_t *win = sc->sc2;
 
     for (j = 0; j != 100; j += 1) {
         sfRenderWindow_drawSprite(window, win->c_sprite[j], &win->state[j]);
